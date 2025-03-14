@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Canvas pour le fond animé */
+#background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#titre {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    padding: 15px;
+    color: white;
+}
+
+#box {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(205, 205, 202, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: relative;
+    z-index: 10;
+}
+
+#login, #pwd {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#btn-connect {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+
+span {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}

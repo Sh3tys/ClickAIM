@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="./game.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h2 id="player-name"></h2>
+      <button id="reset-button">Reset</button>
+      <button id="give-button">GIVE</button>
+
+      <div class="game-window" id="game-window"></div>
+
+      <p>Score: <span id="score">0</span></p>
+
+      <div class="panel">
+        <div id="farm-section">
+          <h3>Ferme</h3>
+
+          <button onclick="buyFarm()">
+            Acheter Ferme (<span id="farm-price">100</span> pts)
+          </button>
+          <p>Fermes: <span id="farm-count">0</span></p>
+
+          <h3>Usine</h3>
+          <button onclick="buyFactory()">
+            Acheter Usine (<span id="factory-price">1000</span> pts)
+          </button>
+          <p>Usines: <span id="factory-count">0</span></p>
+
+          <h3>Ville</h3>
+          <button onclick="buyCity()">
+            Acheter Ville (<span id="city-price">5000</span> pts)
+          </button>
+          <p>Ville: <span id="city-count">0</span></p>
+        </div>
+
+        <div id="shop-section">
+          <h3>Shop</h3>
+          <button onclick="buyAutoClicker()">
+            Auto-Clicker (<span id="auto-clicker-price">5</span> pts)
+          </button>
+
+          <button onclick="buyMultiplier()">
+            Multiplicateur (<span id="multiplier-price">75</span> pts)
+          </button>
+        </div>
+
+        <div id="boost-section">
+          <h3>Boost</h3>
+
+          <button onclick="buyPermanentBoost()">
+            Boost Éternel (<span id="boost-price">100</span> pts)
+          </button>
+          <p>Bonus: <span id="boost-multiplier">0</span>%</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
